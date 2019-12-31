@@ -19,8 +19,13 @@
     .item4 {
       background: LightPink;
     }
+
     .item5 {
       background: PaleGreen;
+      /* add your code below this line */
+      grid-area: footer;
+
+      /* add your code above this line */
     }
 
     .container {
@@ -32,13 +37,10 @@
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
       grid-gap: 10px;
-      /* change code below this line */
-
       grid-template-areas:
         "header header header"
-        ". content content"
+        "advert content content"
         "footer footer footer";
-      /* change code above this line */
     }
   </style>
 
