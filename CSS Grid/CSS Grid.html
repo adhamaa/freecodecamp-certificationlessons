@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<style>
+  </head>
+  <style>
+    .item1 {
+      background: LightSkyBlue;
+    }
+    .item2 {
+      background: LightSalmon;
+    }
+    .item3 {
+      background: PaleTurquoise;
+    }
+    .item4 {
+      background: LightPink;
+    }
 
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
+    .item5 {
+      background: PaleGreen;
+      grid-column: 2 / 4;
+      /* add your code below this line */
+      grid-row: 2 / 4;
 
-  .item5 {
-    background: PaleGreen;
-    /* add your code below this line */
-    grid-column: 2/4;
+      /* add your code above this line */
+    }
 
-    /* add your code above this line */
-  }
-  
     .container {
       font-size: 40px;
       width: 100%;
@@ -34,10 +42,8 @@
       /* add your code above this line */
     }
   </style>
-  
-  
-  
-<body>
+
+  <body>
     <div class="container">
       <div class="item1">1</div>
       <div class="item2">2</div>
@@ -45,5 +51,5 @@
       <div class="item4">4</div>
       <div class="item5">5</div>
     </div>
-</body>
+  </body>
 </html>
