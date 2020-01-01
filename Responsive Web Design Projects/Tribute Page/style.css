@@ -1,45 +1,108 @@
-h1 {
-  font-family: "Cinzel", serif;
+html {
+  /* Setting a base font size of 10px give us easier rem calculations
+     Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+   */
+  font-size: 11px;
+}
+
+body {
+  /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
+  font-family: "Kulim Park", Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
   text-align: center;
-  font-size: 48px;
+  color: #333;
+  margin: 0;
+}
+
+.headtext {
+  font-family: "Cinzel", "Kulim Park", sans-serif;
+}
+
+h1 {
+  font-family: "Cinzel Decorative", cursive !important;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+@media (max-width: 460px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
 }
 
 h2 {
-  font-family: "Cinzel", serif;
-  text-align: center;
-  font-size: 24px;
-}
-h3 {
-  font-family: "Kulim Park", sans-serif;
-  text-align: center;
-  font-size: 3vh;
-  font-weight: lighter;
+  font-family: "Cinzel", sans-serif;
+  font-size: 2.25rem;
 }
 
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
-  padding: auto;
-  max-width: 300px;
-  margin: auto;
+h3 {
+  font-size: 1.75rem;
+}
+
+a {
+  color: #4799a7;
+}
+
+a:visited {
+  color: #8f6363;
+}
+
+#main {
+  margin: 30px 8px;
+  padding: 15px;
+  border-radius: 5px;
+  background: #eee;
+}
+
+@media (max-width: 460px) {
+  #main {
+    margin: 0;
+  }
 }
 
 img {
-  max-width: 500px;
-  max-height: 300px;
+  max-width: 40%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
 }
 
-figcaption {
-  font-family: "Kulim Park", sans serif;
-  font-size: 2vh;
-  font-weight: lighter;
-  background-color: rgba(255, 255, 255, 0.712);
-  color: rgb(0, 0, 0);
-  padding: 3px;
+#img-div {
+  background: white;
+  padding: 10px;
+  margin: 0;
+}
+
+#img-caption {
+  margin: 15px 0 5px 0;
+}
+
+@media (max-width: 460px) {
+  #img-caption {
+    font-size: 1.4rem;
+  }
+}
+
+#headline {
+  margin: 50px 0;
   text-align: center;
 }
 
 ul {
-  font-family: "Kulim Park", sans serif;
+  max-width: 550px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+li {
+  margin: 30px 0;
+}
+
+blockquote {
+  font-style: italic;
+  max-width: 545px;
+  margin: 0 auto 50px auto;
+  text-align: center;
 }
