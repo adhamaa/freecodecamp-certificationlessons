@@ -1,0 +1,45 @@
+h1 {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  font-size: 48px;
+}
+
+h2 {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  font-size: 24px;
+}
+h3 {
+  font-family: "Kulim Park", sans-serif;
+  text-align: center;
+  font-size: 3vh;
+  font-weight: lighter;
+}
+
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: auto;
+  max-width: 300px;
+  margin: auto;
+}
+
+img {
+  max-width: 500px;
+  max-height: 300px;
+}
+
+figcaption {
+  font-family: "Kulim Park", sans serif;
+  font-size: 2vh;
+  font-weight: lighter;
+  background-color: rgba(255, 255, 255, 0.712);
+  color: rgb(0, 0, 0);
+  padding: 3px;
+  text-align: center;
+}
+
+ul {
+  font-family: "Kulim Park", sans serif;
+}
