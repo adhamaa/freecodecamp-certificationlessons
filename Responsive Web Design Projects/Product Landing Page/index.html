@@ -10,13 +10,50 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
+    <div class="wrapper">
       <header id="header">
-        <div id="header-img" class="logo">
-          <img src="biomemporium logo 01.png" width="150" height="70" alt="" />
+        <div>
+          <img
+            id="header-img"
+            class="logo"
+            src="biomemporium logo 01.png"
+            width="150"
+            height="70"
+            alt="company logo"
+          />
         </div>
+        <nav id="nav-bar">
+          <ul>
+            <li class="nav-link"><a href="#form" target="_blank">Menu</a></li>
+            <li class="nav-link">
+              <a href="#submit" target="_blank">About</a>
+            </li>
+            <li class="nav-link">
+              <a href="#video" target="_blank">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </header>
-      <nav></nav>
+      <div class="container">
+        <iframe
+          id="video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/s2lCkVHQYus?controls=0"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <form id="form" action="#">
+        <label for="email"
+          >Email<input
+            id="email"
+            type="email"
+            placeholder="Enter your email here"
+        /></label>
+        <input type="submit" name="submit" id="submit" value="submit" />
+      </form>
       <footer></footer>
     </div>
   </body>
