@@ -6,24 +6,111 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Survey Form</title>
   </head>
-  <main>
-    <h1 id="title"></h1>
-    <p id="description"></p>
+  <body>
+    <main>
+      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <p id="description">
+        Thank you for taking the time to help us improve the platform
+      </p>
 
-    <form id="survey-form" action="">
-      <label for="name" id="name-label"
-        >Name
-        <fieldset>Name</fieldset></label
-      >
-      <label for="email" id="email-label"
-        >Email
-        <fieldset>Email</fieldset></label
-      >
-      <label for="age" id="number-label"
-        >Age
-        <fieldset>Age</fieldset></label
-      >
-    </form>
-  </main>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+      <form id="survey-form" action="">
+        <label for="name" id="name-label"
+          >Name<input type="text" placeholder="Name" id="name" required
+        /></label>
+        <label for="email" id="email-label"
+          >Email<input type="email" placeholder="Email" id="email" required
+        /></label>
+        <label for="age" id="number-label"
+          >Age (optional)<input
+            type="number"
+            placeholder="Age"
+            id="number"
+            min="10"
+            max="99"
+        /></label>
+
+        <p>Which option best describes your current role?</p>
+        <select id="dropdown" required>
+          <option value="select current role">Select current role</option>
+          <option value="student">Student</option>
+          <option value="Full Time Job">Full Time Job</option>
+          <option value="Full Time Learner">Full Time Learner</option>
+          <option value="prefer not to say">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+
+        <p>Would you recommend freeCodeCamp to a friend?</p>
+        <label for="radio button"
+          ><input
+            type="radio"
+            name="radio-btn"
+            value="definitely"
+            checked
+          />Definitely</label
+        >
+        <label for=""
+          ><input type="radio" name="radio-btn" value="maybe" />Maybe</label
+        >
+        <label for=""
+          ><input type="radio" name="radio-btn" value="not sure" />Not
+          sure</label
+        >
+
+        <p>What is your favorite feature of freeCodeCamp?</p>
+        <select id="dropdown" required>
+          <option value="select an option">Select an option</option>
+          <option value="challenges">Challenges</option>
+          <option value="project">Project</option>
+          <option value="community">Community</option>
+          <option value="open source">Open Source</option>
+        </select>
+
+        <p>What would you like to see improved? (Check all that apply)</p>
+        <label for=""
+          ><input id="" type="checkbox" value="survey-form input"
+        /></label>
+        <label for=""
+          ><input id="" type="checkbox" value="survey-form input"
+        /></label>
+        <label for=""
+          ><input id="" type="checkbox" value="survey-form input"
+        /></label>
+        <label for=""
+          ><input id="" type="checkbox" value="survey-form input"
+        /></label>
+        <label for=""
+          ><input id="" type="checkbox" value="survey-form input"
+        /></label>
+        <label for=""
+          ><input id="" type="checkbox" value="survey-form input"
+        /></label>
+        <label for=""
+          ><input id="" type="checkbox" value="survey-form input"
+        /></label>
+        <label for=""
+          ><input id="" type="checkbox" value="survey-form input"
+        /></label>
+        <label for=""
+          ><input id="" type="checkbox" value="survey-form input"
+        /></label>
+        <label for=""
+          ><input id="" type="checkbox" value="survey-form input"
+        /></label>
+        <label for=""
+          ><input id="" type="checkbox" value="survey-form input"
+        /></label>
+
+        <textarea
+          name="comment"
+          id="comment-box"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <button type="submit" id="submit">
+          Submit
+        </button>
+      </form>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
 </html>
