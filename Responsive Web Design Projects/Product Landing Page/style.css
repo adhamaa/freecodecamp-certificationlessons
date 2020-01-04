@@ -1,15 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #eee;
+}
 header {
-  background-image: linear-gradient(to right, white, aqua);
+  background-image: linear-gradient(to right, #eee, aqua);
   margin-top: 50px;
   margin-left: 20px;
 }
 
-#header-img {
+#page-wrapper {
+  position: relative;
 }
 
 nav {
@@ -24,6 +30,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: relative;
 }
 
 li {

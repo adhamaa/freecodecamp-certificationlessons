@@ -10,9 +10,9 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="wrapper">
+    <div id="page-wrapper">
       <header id="header">
-        <div>
+        <div class="logo">
           <img
             id="header-img"
             class="logo"
@@ -24,16 +24,29 @@
         </div>
         <nav id="nav-bar">
           <ul>
-            <li class="nav-link"><a href="#form" target="_blank">Menu</a></li>
-            <li class="nav-link">
-              <a href="#submit" target="_blank">About</a>
-            </li>
-            <li class="nav-link">
-              <a href="#video" target="_blank">Contact</a>
-            </li>
+            <li><a class="nav-link" href="#feature">Feature</a></li>
+            <li><a class="nav-link" href="#pricing">Pricing</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
+
+      <div class="container">
+        <section id="hero">
+          <h2>Handcrafted, home-made masterpieces</h2>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input
+              name="email"
+              id="email"
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <input id="submit" type="submit" value="Get Started" class="btn" />
+          </form>
+        </section>
+      </div>
+
       <div class="container">
         <iframe
           id="video"
@@ -45,16 +58,15 @@
           allowfullscreen
         ></iframe>
       </div>
-      <form id="form" action="URL: https://www.freecodecamp.com/email-submit">
-        <label for="email"
-          >Email<input
-            id="email"
-            type="email"
-            placeholder="Enter your email here"
-        /></label>
-        <input type="submit" name="submit" id="submit" value="submit" />
-      </form>
-      <footer></footer>
+
+      <footer>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <span>Copyright 2016, Original Trombones</span>
+      </footer>
     </div>
   </body>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
