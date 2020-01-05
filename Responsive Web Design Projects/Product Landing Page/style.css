@@ -34,13 +34,14 @@ ul {
 }
 
 li {
-  float: right;
+  margin: left;
+  position: sticky;
 }
 
 li a {
   display: block;
   color: purple;
-  text-align: center;
+  text-align: right;
   padding: 16px;
   text-decoration: none;
 }
