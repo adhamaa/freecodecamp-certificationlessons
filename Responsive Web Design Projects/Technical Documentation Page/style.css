@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "monospace", sans-serif;
+  background-color: skyblue;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+main {
+  position: absolute;
+  bottom: 40%;
+  left: 40%;
+}
+
+.blue-square-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.blue-square {
+  background-color: #0074d9;
+  width: 210px;
+  height: 100px;
+  display: inline-block;
+}
+
+.yellow-square {
+  background-color: #ffdc00;
+  width: 210px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.green-square {
+  background-color: #3d9970;
+  width: 210px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -105px;
+}
