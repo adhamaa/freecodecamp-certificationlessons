@@ -34,6 +34,7 @@ h3 {
   border-right: solid;
   border-color: rgb(180, 124, 41);
   box-shadow: black;
+  /* z-index: 1; */
 }
 
 header {
@@ -170,20 +171,18 @@ code {
   }
 }
 
-/* .container {
-  display: flex;
-  flex-grow: 2;
-  flex-direction: column;
-  align-content: flex-end;
-} */
+.container footer {
+  display: none;
+  position: absolute;
+  /* bottom: 0; */
+  bottom: 0;
+  width: 100%;
+}
 
 footer {
-  display: block;
-  width: 50%;
-  position: absolute;
   padding: 10px;
   bottom: 0;
-  justify-content: center;
+  justify-content: flex-end;
   background-color: darkgray;
   color: white;
   font-style: italic;
