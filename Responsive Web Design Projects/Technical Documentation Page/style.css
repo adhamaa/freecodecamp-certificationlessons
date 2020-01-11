@@ -13,6 +13,17 @@ body {
   line-height: 1.5;
 }
 
+section header,
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 2;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
 #navbar {
   position: fixed;
   min-width: 290px;
@@ -21,7 +32,8 @@ body {
   width: 300px;
   height: 100%;
   border-right: solid;
-  border-color: rgba(197, 248, 10, 0.4);
+  border-color: rgb(180, 124, 41);
+  box-shadow: black;
 }
 
 header {
@@ -60,6 +72,15 @@ header {
   cursor: pointer;
 }
 
+#navbar a:hover {
+  color: rgb(180, 124, 41);
+  border: rgb(180, 124, 41) solid;
+  border-radius: 24px;
+  width: 70%;
+  margin: 0 auto;
+  transition: all ease;
+}
+
 #main-doc {
   position: absolute;
   margin-left: 310px;
@@ -74,7 +95,7 @@ section article {
 }
 
 section li {
-  margin: 15px 0px 0px 20px;
+  margin: 15px 0px 48px 20px;
 }
 
 code {
@@ -89,6 +110,7 @@ code {
   padding: 15px;
   margin: 10px;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 815px) {
@@ -100,21 +122,36 @@ code {
 
   #navbar {
     background-color: white;
-    position: absolute;
+    position: fixed;
     top: 0;
     padding: 0;
     margin: 0;
     width: 100%;
-    max-height: 275px;
+    max-height: 75px;
     border: none;
     z-index: 1;
     border-bottom: 2px solid;
+    overflow: hidden;
+    transition: all ease 0.3s;
+  }
+
+  #navbar:hover {
+    max-height: 400px;
+  }
+
+  #navbar a:hover {
+    color: rgb(180, 124, 41);
+    border: rgb(180, 124, 41) solid;
+    border-radius: 24px;
+    width: 50%;
+    margin: 0 auto;
+    transition: all ease;
   }
 
   #main-doc {
     position: relative;
     margin-left: 0px;
-    margin-top: 270px;
+    margin-top: 70px;
   }
 }
 
