@@ -1,4 +1,12 @@
-/* base reset */
+/* Custom properties/variables  */
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #8b1a29;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+/* Base reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +18,10 @@
 *::after {
   box-sizing: inherit;
 }
+
 html {
   box-sizing: border-box;
+
   /* Set font size for easy rem calculations
      * default document font size = 16px, 1rem = 16px, 100% = 16px
      * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
@@ -19,20 +29,21 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
 /* A few media query to set some font sizes at different screen sizes.
- * This helps automate a bit of responsiveness.
- * The trick is to use the rem unit for size values, margin and padding.
- * Because rem is relative to the document font size
- * when we scale up or down the font size on the document
- * it will affect all properties using rem units for the values.
-*/
+   * This helps automate a bit of responsiveness.
+   * The trick is to use the rem unit for size values, margin and padding.
+   * Because rem is relative to the document font size
+   * when we scale up or down the font size on the document
+   * it will affect all properties using rem units for the values.
+  */
 
 /* I am using the em unit for breakpoints
- * The calculation is the following
- * screen size divided by browser base font size
- * As an example: a breakpoint at 980px
- * 980px / 16px = 61.25em
-*/
+   * The calculation is the following
+   * screen size divided by browser base font size
+   * As an example: a breakpoint at 980px
+   * 980px / 16px = 61.25em
+  */
 
 /* 1200px / 16px = 75em */
 @media (max-width: 75em) {
@@ -55,13 +66,14 @@ html {
   }
 }
 
-/* style for body */
+/* Base styles */
+
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem; /* 18px */
   font-weight: 400;
   line-height: 1.4;
-  color: aliceblue;
+  color: var(--main-white);
 }
 
 h1,
@@ -85,7 +97,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: aliceblue;
+  color: var(--main-white);
 }
 
 img {
@@ -93,49 +105,47 @@ img {
   width: 100%;
 }
 
-/* style for the nav */
+/* nav */
+
 .nav {
-  padding: 10px;
-  position: fixed;
-  width: 100%;
   display: flex;
-  flex-flow: row nowrap;
   justify-content: flex-end;
-  background-color: rgb(114, 9, 9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-red);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
 
 .nav-list {
   display: flex;
-  justify-content: space-around;
-  margin: 0 2em;
+  margin-right: 2rem;
 }
 
-.nav-list li {
-  margin: 0 2em;
-  transition: all ease 0.2s;
-}
-
-.nav-list li a:hover {
-  color: rgb(255, 196, 0);
-  text-shadow: rgb(255, 255, 255);
-}
-
-@media screen and (max-width: 600px) {
+@media (max-width: 28.75em) {
   .nav {
     justify-content: center;
   }
+
   .nav-list {
-    flex-direction: column;
-    text-align: center;
-  }
-  .nav-list li {
-    margin: 1rem;
+    margin: 0 1rem;
   }
 }
 
-/* welcome section */
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  background: var(--main-blue);
+}
+
+/* Welcome section */
+
 .welcome-section {
   display: flex;
   flex-direction: column;
@@ -151,28 +161,31 @@ img {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
-  letter-spacing: 0.5em;
-  color: rgb(114, 9, 9);
+  letter-spacing: 0.3em;
+  color: var(--main-red);
 }
-@media screen and (max-width: 800px) {
-  .welcome-section > h1 {
-    font-size: 2em;
-  }
-  .welcome-section > p {
-    font-size: 1.5em;
-    letter-spacing: 0.2em;
+
+/* Projects section */
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: var(--main-blue);
+}
+
+.projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
   }
 }
 
-/* project section */
-.projects-section {
-  max-height: 100vh;
-  background-color: rgb(111, 74, 145);
-}
-.projects-section h2 {
-  padding: 1em;
-}
-/* grid */
+/* "Automagic" image grid using no media queries */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -182,6 +195,7 @@ img {
   margin: 0 auto;
   margin-bottom: 6rem;
 }
+
 @media (max-width: 30.625em) {
   .projects-section {
     padding: 6rem 1rem;
@@ -191,14 +205,15 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
 .project {
-  background: rgb(40, 41, 40);
+  background: var(--main-gray);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
 }
 
 .code {
-  color: rgb(40, 41, 40);
+  color: var(--main-gray);
   transition: color 0.3s ease-out;
 }
 
@@ -225,12 +240,12 @@ img {
 
 .btn-show-all {
   font-size: 2rem;
-  background: rgb(40, 41, 40);
+  background: var(--main-gray);
   transition: background 0.3s ease-out;
 }
 
 .btn-show-all:hover {
-  background: rgb(114, 9, 9);
+  background: var(--main-red);
 }
 
 .btn-show-all:hover > i {
@@ -254,7 +269,7 @@ img {
   width: 100%;
   height: 80vh;
   padding: 0 2rem;
-  background: rgb(40, 41, 40);
+  background: var(--main-gray);
 }
 
 .contact-section-header > h2 {
@@ -262,9 +277,6 @@ img {
 }
 
 @media (max-width: 28.75em) {
-  /* .contact-section {
-    flex: 0;
-  } */
   .contact-section-header > h2 {
     font-size: 4rem;
   }
@@ -300,12 +312,13 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  background: rgb(73, 73, 73);
-  border-top: 4px solid rgb(114, 9, 9);
+  background: var(--main-gray);
+  border-top: 4px solid var(--main-red);
 }
 
 footer > p {
   margin: 2rem;
+  justify-content: center;
 }
 
 footer i {
