@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Style the header */
+      .header {
+        background-color: #ca1818;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+      }
+
+      /* Container for flexboxes */
+      .row {
+        display: -webkit-flex;
+        display: flex;
+      }
+
+      /* Create three equal columns that sits next to each other */
+      .column {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding: 10px;
+        min-height: calc(100vh - 460px);
+        text-align: center;
+      }
+
+      /* .column-1 {
+        flex-basis: 20%;
+      }
+      .column-2 {
+        flex-basis: 60%;
+      }
+      .column-3 {
+        flex-basis: 20%;
+      } */
+
+      /* Style the footer */
+      .footer {
+        background-color: #123cc5;
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media (max-width: 600px) {
+        .row {
+          -webkit-flex-direction: column;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>CSS Template using Flexbox</h2>
+      <p>
+        In this example, we have created a header, three equal columns and a
+        footer. On smaller screens, the columns will stack on top of each other.
+      </p>
+      <p>Resize the browser window to see the responsive effect.</p>
+      <p>
+        <strong>Note:</strong> Flexbox is not supported in Internet Explorer 10
+        eand earlier versions.
+      </p>
+      <div class="header">
+        <h2>Header</h2>
+      </div>
+    </header>
+    <main>
+      <div class="row">
+        <div class="column column-1" style="background-color:#aaa;">
+          <h1>Column-1</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+            similique reiciendis quod aperiam? Ratione blanditiis facilis
+            consectetur veritatis est et quas iure voluptatibus tempore,
+            perspiciatis expedita voluptatem error ducimus? Ratione!
+          </p>
+        </div>
+        <div class="column column-2" style="background-color:#bbb;">
+          <h1>Column-2</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+            similique reiciendis quod aperiam? Ratione blanditiis facilis
+            consectetur veritatis est et quas iure voluptatibus tempore,
+            perspiciatis expedita voluptatem error ducimus? Ratione!
+          </p>
+        </div>
+        <div class="column column-3" style="background-color:#ccc;">
+          <h1>Column-3</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+            similique reiciendis quod aperiam? Ratione blanditiis facilis
+            consectetur veritatis est et quas iure voluptatibus tempore,
+            perspiciatis expedita voluptatem error ducimus? Ratione!
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <p>
+          <strong style="color: white; font-style: italic;"
+            >copyright &copy; 2020, adhamaa.</strong
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
