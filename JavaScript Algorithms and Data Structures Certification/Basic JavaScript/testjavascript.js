@@ -9,6 +9,7 @@ b = a;
 console.log(a);
 console.log(myName);
 
-background(186, 145, 20); // wooden table
-ellipse(200, 200, 350, 350); // plate
-ellipse(200, 200, 300, 300);
+var x = 5;
+var y = 10;
+
+console.log(x + y);
