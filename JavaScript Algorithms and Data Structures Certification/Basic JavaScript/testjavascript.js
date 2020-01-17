@@ -1,14 +1,28 @@
-var a;
-var b = 2;
-var myName = "adhamaa";
-console.log(a);
-a = 7;
+const stringCounter = () => {
+  let myNameLength = 0;
+  let myName = "ADHAMAA";
+  const input = document.querySelector(".inputField");
 
-b = a;
+  myNameLength = myName.length;
 
-console.log(a);
-console.log(myName);
+  const updateCounter = () => {
+    const counter = document.querySelector(".counter");
+    counter.textContent = myNameLength;
+  };
+  //Execute Counter Update
+  updateCounter();
 
-background(186, 145, 20); // wooden table
-ellipse(200, 200, 350, 350); // plate
-ellipse(200, 200, 300, 300);
+  //Execute name
+
+  //   const getAndSetVal = function() {
+  //     const input = document.querySelecto(".inputField").value;
+  //     const addTextBtn = document.querySelector(".addTextBtn");
+  //     input.addEventListener("click", function() {
+  //       alert("insert string");
+  //     });
+  //     console.log(input);
+  //   };
+  //   getAndSetVal();
+};
+//Execute main string counter
+stringCounter();

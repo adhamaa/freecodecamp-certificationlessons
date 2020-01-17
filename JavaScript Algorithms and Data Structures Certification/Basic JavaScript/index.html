@@ -6,18 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
   </head>
-  <body>
-    <h2>My First JavaScript</h2>
+  <body style="display: block;">
+    <h2 style="text-align: center;">My First JavaScript</h2>
 
-    <button
-      type="button"
-      onclick="document.getElementById('demo').innerHTML = Date()"
+    <h1 style="text-align: center;">String Counter</h1>
+
+    <p
+      class="counter"
+      style="font-size: 48px; font-weight: bold; text-align: center;"
     >
-      Click me to display Date and Time.
-    </button>
+      0
+    </p>
 
-    <p id="demo"></p>
-    <h1>hI this is JS playground</h1>
-    <script src="/testjavascript.js"></script>
+    <input class"inputField" type="text" style=" position: absolute; left: 50%;
+    margin-left: -85px; background-color: rgba(192, 219, 137, 0.425); border:
+    2px rgba(32, 32, 32, 0.336) solid;"/>
+    <button
+      class="addTextBtn"
+      style="position: absolute; left: 50%; margin-top: 35px; margin-left: -25px;"
+    >
+      Count
+    </button>
+    <script src="./testjavascript.js"></script>
   </body>
 </html>
