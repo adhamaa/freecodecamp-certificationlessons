@@ -17,16 +17,30 @@
     >
       0
     </p>
-
-    <input class"inputField" type="text" style=" position: absolute; left: 50%;
+    <input
+      type="text"
+      id="myText"
+      value="Insert text..."
+      onsubmit="myFunction()"
+      style=" position: absolute; left: 50%;
     margin-left: -85px; background-color: rgba(192, 219, 137, 0.425); border:
-    2px rgba(32, 32, 32, 0.336) solid;"/>
+    2px rgba(32, 32, 32, 0.336) solid;"
+    />
+
     <button
-      class="addTextBtn"
-      style="position: absolute; left: 50%; margin-top: 35px; margin-left: -25px;"
+      type="submit"
+      onclick="myFunction()"
+      style="position: absolute; left: 50%; margin-top: 35px; margin-left:
+      -25px;"
     >
       Count
     </button>
+    <p
+      id="demo"
+      style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px; margin-top: 100px;"
+    >
+      ___
+    </p>
     <script src="./testjavascript.js"></script>
   </body>
 </html>
