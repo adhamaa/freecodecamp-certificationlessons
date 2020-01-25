@@ -1,4 +1,11 @@
 <html>
+  <head>
+    <style>
+      body {
+        background-color: lightcyan;
+      }
+    </style>
+  </head>
   <body>
     <h2>JavaScript Math.random()</h2>
 
@@ -24,6 +31,17 @@
         return Math.floor(Math.random() * (max - min)) + min;
         return (min.value = document.getElementById("minNum"));
       }
+      // --------------------------------------------------------------------
+      let fruits = ["apples", "pears", "oranges", "peaches", "pears"];
+
+      console.log(fruits.indexOf("dates")); // returns -1
+      console.log(fruits.indexOf("oranges")); // returns 2
+      console.log(fruits.indexOf("pears")); // returns 1, the first index at which the element exists
+      // --------------------------------------------------------------------
+      function quickCheck(arr, elem) {
+        return arr.indexOf(elem) >= 0 ? true : false;
+      }
+      console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
     </script>
   </body>
 </html>
