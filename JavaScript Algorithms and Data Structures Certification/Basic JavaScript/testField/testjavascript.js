@@ -20,3 +20,28 @@ function myFunction() {
   document.getElementById("demo").innerHTML = x;
   x = myName.length;
 }
+
+[
+  //1
+  ["deep"], //2
+  [
+    //2
+    ["deeper"], //3
+    ["deeper"] //3
+  ],
+  [
+    //2
+    [
+      //3
+      ["deepest"], //4
+      ["deepest"] //4
+    ],
+    [
+      //3
+      [
+        //4
+        ["deepest-est?"] //5
+      ]
+    ]
+  ]
+];
