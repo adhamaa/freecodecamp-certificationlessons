@@ -21,27 +21,12 @@ function myFunction() {
   x = myName.length;
 }
 
-[
-  //1
-  ["deep"], //2
-  [
-    //2
-    ["deeper"], //3
-    ["deeper"] //3
-  ],
-  [
-    //2
-    [
-      //3
-      ["deepest"], //4
-      ["deepest"] //4
-    ],
-    [
-      //3
-      [
-        //4
-        ["deepest-est?"] //5
-      ]
-    ]
-  ]
-];
+for (let i = 1; i <= 9; i++) {
+  console.log("Hello World", i);
+}
+for (let i = 0; i <= 9; i++) {
+  if (i % 2 !== 0) console.log(i);
+}
+for (let i = 9; i >= 0; i--) {
+  if (i % 2 !== 0) console.log(i);
+}
