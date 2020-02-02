@@ -30,3 +30,16 @@ for (let i = 0; i <= 9; i++) {
 for (let i = 9; i >= 0; i--) {
   if (i % 2 !== 0) console.log(i);
 }
+
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  var newArr = [];
+  let maxLength = arr.length;
+  for (let i = 0; i < maxLength; i += 2) {
+    newArr.push(arr.slice(i, i + size));
+  }
+
+  return newArr;
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
