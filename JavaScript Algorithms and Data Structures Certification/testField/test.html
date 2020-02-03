@@ -7,7 +7,7 @@
     </style>
   </head>
   <body>
-    <h2>JavaScript Math.random()</h2>
+    <!-- <h2>JavaScript Math.random()</h2>
 
     <p>
       Every time you click the button, getRndInteger(min, max) returns a random
@@ -24,24 +24,70 @@
     <p id="maxNum"></p>
     <p id="randomNum"></p>
     <p id="roundedNum"></p>
-    <p id="demo"></p>
+    <p id="demo"></p> -->
+
+    <div>
+      <textarea name="" id="words" cols="30" rows="10"></textarea>
+      <p id="showData"></p>
+      <p id="showWordsCount"></p>
+      <button id="countBtn" onclick="countWords">Count Char</button>
+    </div>
+
+    <h3>Trigger Button Click on Enter</h3>
+    <p>Press the "Enter" key inside the input field to trigger the button.</p>
+
+    <input id="myInput" value="Some text.." onfocus="this.value='';" />
+    <button id="myBtn" onclick="">
+      Button
+    </button>
 
     <script>
-      function getRndInteger(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
-        return (min.value = document.getElementById("minNum"));
-      }
-      // --------------------------------------------------------------------
-      let fruits = ["apples", "pears", "oranges", "peaches", "pears"];
+      // function getRndInteger(min, max) {
+      //   return Math.floor(Math.random() * (max - min)) + min;
+      //   return (min.value = document.getElementById("minNum"));
+      // }
+      // // --------------------------------------------------------------------
+      // let fruits = ["apples", "pears", "oranges", "peaches", "pears"];
 
-      console.log(fruits.indexOf("dates")); // returns -1
-      console.log(fruits.indexOf("oranges")); // returns 2
-      console.log(fruits.indexOf("pears")); // returns 1, the first index at which the element exists
-      // --------------------------------------------------------------------
-      function quickCheck(arr, elem) {
-        return arr.indexOf(elem) >= 0 ? true : false;
-      }
-      console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
+      // console.log(fruits.indexOf("dates")); // returns -1
+      // console.log(fruits.indexOf("oranges")); // returns 2
+      // console.log(fruits.indexOf("pears")); // returns 1, the first index at which the element exists
+      // // --------------------------------------------------------------------
+      // function quickCheck(arr, elem) {
+      //   return arr.indexOf(elem) >= 0 ? true : false;
+      // }
+      // console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
+
+      const countWords = () => {
+        // let noc = document.querySelector("#words").value.length;
+        // let now = document.querySelector("#words").value;
+        let noc = document.getElementById("words").value.length;
+        let now = document.getElementById("words").value;
+
+        now = now.match(/\w+/g);
+        now = now.length;
+        console.log(now);
+
+        // document.querySelector("#showData").innerHTML =
+        //   "The total characters = " + noc;
+        // document.querySelector("#showWordsCount").innerHTML =
+        //   "The total words = " + now;
+        document.getElementById("showData").innerHTML =
+          "The total characters = " + noc;
+        document.getElementById("showWordsCount").innerHTML =
+          "The total words = " + now;
+      };
+
+      let input = document.getElementById("myInput");
+      let btn = document.querySelector("myBtn");
+      input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+          // event.preventDefault();
+          alert("HI LAD");
+          btn.click();
+          console.log(event.target.value);
+        }
+      });
     </script>
   </body>
 </html>

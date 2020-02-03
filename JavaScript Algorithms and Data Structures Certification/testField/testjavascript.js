@@ -15,11 +15,20 @@ const stringCounter = () => {
 //Execute main string counter
 stringCounter();
 
-function myFunction() {
+const myFunction = () => {
   var x = document.getElementById("myText").value;
   document.getElementById("demo").innerHTML = x;
   x = myName.length;
-}
+};
+
+var input = document.getElementById("myText");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+
+    document.getElementById("myBtn").click();
+  }
+});
 
 for (let i = 1; i <= 9; i++) {
   console.log("Hello World", i);

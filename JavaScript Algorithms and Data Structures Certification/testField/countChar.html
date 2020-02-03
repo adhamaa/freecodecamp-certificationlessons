@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Count Char</title>
+
+    <script>
+      //   function countChars(obj) {
+      //     document.getElementById("charNum").innerHTML =
+      //       obj.value.length + " characters";
+      //   }
+      const countChars = obj => {
+        document.getElementById("charNum").innerHTML =
+          obj.value.length + " characters";
+      };
+
+      let input = document.querySelector("input");
+      input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+          //    event.preventDefault();
+          //    document.getElementById("myBtn").click();
+          console.log(event.target.value);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <textarea
+      id="input"
+      name="message"
+      on="countChars(this);"
+      placeholder="baanmmm"
+    ></textarea>
+    <button id="btn">count</button>
+    <p id="charNum">0 characters</p>
+  </body>
+</html>
