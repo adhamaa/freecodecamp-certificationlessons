@@ -5,35 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Count Char</title>
+  </head>
+  <body>
+    <textarea id="input" name="message" placeholder="baanmmm"></textarea>
+    <button id="btn">count</button>
+    <p id="charNum">0 characters</p>
 
     <script>
       //   function countChars(obj) {
       //     document.getElementById("charNum").innerHTML =
       //       obj.value.length + " characters";
       //   }
-      const countChars = obj => {
-        document.getElementById("charNum").innerHTML =
-          obj.value.length + " characters";
-      };
+      // const countChars = obj => {
+      //   document.getElementById("charNum").innerHTML =
+      //     obj.value.length + " characters";
+      // };
+      // input.addEventListener("keyup", function(event) {
+      //   if (event.keyCode === 13) {
+      //     //    event.preventDefault();
+      //     //    document.getElementById("myBtn").click();
+      //     console.log(event.target.value);
+      //   }
+      // });
 
-      let input = document.querySelector("input");
-      input.addEventListener("keyup", function(event) {
-        if (event.keyCode === 13) {
-          //    event.preventDefault();
-          //    document.getElementById("myBtn").click();
-          console.log(event.target.value);
-        }
-      });
+      const countChar = () => {
+        /* declared variables */
+        const button = document.querySelector("#btn");
+        let charLength = 0;
+        /* declared variables */
+        console.log(charLength);
+
+        button.addEventListener("click", function() {
+          const input = document.querySelector("#input");
+
+          const result = document.querySelector("#charNum");
+
+          if (input.value >= 0) {
+            alert("No Words to count!!!");
+          }
+          result.textContent = input.value.length + " characters";
+        });
+      };
+      countChar();
     </script>
-  </head>
-  <body>
-    <textarea
-      id="input"
-      name="message"
-      on="countChars(this);"
-      placeholder="baanmmm"
-    ></textarea>
-    <button id="btn">count</button>
-    <p id="charNum">0 characters</p>
   </body>
 </html>

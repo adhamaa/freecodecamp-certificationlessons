@@ -26,20 +26,21 @@
     <p id="roundedNum"></p>
     <p id="demo"></p> -->
 
-    <div>
+    <div style="text-align: center;">
       <textarea name="" id="words" cols="30" rows="10"></textarea>
-      <p id="showData"></p>
-      <p id="showWordsCount"></p>
+      <p id="showData">nan</p>
+      <p id="showWordsCount">nan</p>
       <button id="countBtn" onclick="countWords">Count Char</button>
+    </div 200px; text-align: center;">
+
+    <div style="margin-top: 150px; text-align: center;">
+      <h3>Trigger Button Click on Enter</h3>
+      <p>Press the "Enter" key inside the input field to trigger the button.</p>
+      <input id="myInput" value="Some text.." onfocus="this.value='';" />
+      <button id="myBtn" onclick="">Button</button>
     </div>
 
-    <h3>Trigger Button Click on Enter</h3>
-    <p>Press the "Enter" key inside the input field to trigger the button.</p>
-
-    <input id="myInput" value="Some text.." onfocus="this.value='';" />
-    <button id="myBtn" onclick="">
-      Button
-    </button>
+    
 
     <script>
       // function getRndInteger(min, max) {
@@ -61,6 +62,10 @@
       const countWords = () => {
         // let noc = document.querySelector("#words").value.length;
         // let now = document.querySelector("#words").value;
+        // document.querySelector("#showData").innerHTML =
+        //   "The total characters = " + noc;
+        // document.querySelector("#showWordsCount").innerHTML =
+        //   "The total words = " + now;
         let noc = document.getElementById("words").value.length;
         let now = document.getElementById("words").value;
 
@@ -68,26 +73,27 @@
         now = now.length;
         console.log(now);
 
-        // document.querySelector("#showData").innerHTML =
-        //   "The total characters = " + noc;
-        // document.querySelector("#showWordsCount").innerHTML =
-        //   "The total words = " + now;
         document.getElementById("showData").innerHTML =
           "The total characters = " + noc;
         document.getElementById("showWordsCount").innerHTML =
           "The total words = " + now;
       };
 
-      let input = document.getElementById("myInput");
-      let btn = document.querySelector("myBtn");
-      input.addEventListener("keyup", function(event) {
+      let myInput = document.getElementById("myInput");
+      let button = document.querySelector("myBtn");
+
+      myInput.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
           // event.preventDefault();
           alert("HI LAD");
-          btn.click();
-          console.log(event.target.value);
         }
       });
+
+
+
+      
+      
+
     </script>
   </body>
 </html>
