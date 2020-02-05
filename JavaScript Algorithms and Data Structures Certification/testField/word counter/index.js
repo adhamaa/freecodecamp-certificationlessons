@@ -25,9 +25,7 @@ const realCount = () => {
     letters.textContent = b + " letters";
   };
 
-  submitBtn.addEventListener("click", function() {
-    updateResult();
-  });
+  submitBtn.addEventListener("click", () => updateResult());
 
   input.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
