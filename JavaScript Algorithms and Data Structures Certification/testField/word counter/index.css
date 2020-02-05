@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+textarea,
+p,
+button {
+  margin: 10px auto;
+}
+
+.wrapper {
+  margin-top: 150px;
+  text-align: center;
+}
+
+#wInput {
+  resize: none;
+  overflow: auto;
+}
