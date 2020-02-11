@@ -34,3 +34,9 @@ const realCount = () => {
   });
 };
 realCount();
+
+
+let bookList = ["big apple", "my encyclopedia", "groud"] 
+function() {
+  book !== bookName
+}
