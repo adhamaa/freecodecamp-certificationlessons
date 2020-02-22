@@ -1,0 +1,19 @@
+body {
+  background-color: darkslategray;
+  h1 {
+    font-family: monospace;
+    text-align: center;
+    font-size: 48px;
+    span {
+      color: deeppink;
+      font-style: italic;
+      // font-size: 32px;
+    }
+  }
+  p {
+    font-family: monospace;
+    text-align: center;
+    font-size: 18px;
+    color: whitesmoke;
+  }
+}

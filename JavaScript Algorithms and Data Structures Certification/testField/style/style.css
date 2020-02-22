@@ -1,0 +1,22 @@
+body {
+  background-color: darkslategray;
+}
+
+body h1 {
+  font-family: monospace;
+  text-align: center;
+  font-size: 48px;
+}
+
+body h1 span {
+  color: deeppink;
+  font-style: italic;
+}
+
+body p {
+  font-family: monospace;
+  text-align: center;
+  font-size: 18px;
+  color: whitesmoke;
+}
+/*# sourceMappingURL=style.css.map */
