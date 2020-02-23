@@ -45,24 +45,31 @@
 // person.age = "27";
 // console.log(person.name);
 
-const squareList = arr => {
-  // only change code below this line
-  return arr.reduce(
-    function(sqrIntegers, num) /* #1 arr(callback) */ {
-      sqrIntegers.concat(num => {
-        if (num >= 5) {
-          return sqrIntegers.concat(Math.pow(num, 2));
-        }
-      });
-    },
-    /* #2 arr(initial value) */
-    []
-  );
-  // only change code above this line
-};
-// test your code
-const squaredIntegers = squareList(/* [-3, 4.8, 5, 3, -3.2] */ [5, 4, 9, 1, 2]);
-console.log(squaredIntegers);
+const myArr = [1, 4, 5, 3, 7, 8, 6, 9];
+
+const squareList = arr =>
+  arr.reduce(function(sqrIntegers, num) {
+    if (num > 5) {
+      return sqrIntegers.concat(Math.pow(num, 2));
+    }
+    return sqrIntegers;
+  }, []);
+const squaredIntegers = squareList(myArr);
+
+const users = [
+  { name: "John", age: 34 },
+  { name: "Amy", age: 20 },
+  { name: "camperCat", age: 10 }
+];
+
+const soa = nVal =>
+  nVal.reduce(function(sum, user) {
+    return nVal;
+  }, []);
+const sumOfAges = soa(users);
+
+// console.log(squaredIntegers);
+console.log(sumOfAges);
 
 /* // the array to be sorted
 var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
