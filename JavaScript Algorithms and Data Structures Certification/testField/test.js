@@ -45,31 +45,31 @@
 // person.age = "27";
 // console.log(person.name);
 
-const myArr = [1, 4, 5, 3, 7, 8, 6, 9];
+// const myArr = [1, 4, 5, 3, 7, 8, 6, 9];
 
-const squareList = arr =>
-  arr.reduce(function(sqrIntegers, num) {
-    if (num > 5) {
-      return sqrIntegers.concat(Math.pow(num, 2));
-    }
-    return sqrIntegers;
-  }, []);
-const squaredIntegers = squareList(myArr);
+// const squareList = arr =>
+//   arr.reduce(function(sqrIntegers, num) {
+//     if (num > 5) {
+//       return sqrIntegers.concat(Math.pow(num, 2));
+//     }
+//     return sqrIntegers;
+//   }, []);
+// const squaredIntegers = squareList(myArr);
 
-const users = [
-  { name: "John", age: 34 },
-  { name: "Amy", age: 20 },
-  { name: "camperCat", age: 10 }
-];
+// const users = [
+//   { name: "John", age: 34 },
+//   { name: "Amy", age: 20 },
+//   { name: "camperCat", age: 10 }
+// ];
 
-const soa = nVal =>
-  nVal.reduce(function(sum, user) {
-    return nVal;
-  }, []);
-const sumOfAges = soa(users);
+// const soa = nVal =>
+//   nVal.reduce(function(sum, user) {
+//     return nVal;
+//   }, []);
+// const sumOfAges = soa(users);
 
-// console.log(squaredIntegers);
-console.log(sumOfAges);
+// // console.log(squaredIntegers);
+// console.log(sumOfAges);
 
 /* // the array to be sorted
 var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
@@ -94,3 +94,16 @@ mapped.sort(function(a, b) {
 var result = mapped.map(function(el){
   return list[el.index];
 }); */
+
+function sumAll(arr) {
+  return arr.reduce((initial, secondValue) => {
+    let count = 0;
+    console.log(initial, secondValue);
+    for (let i = Math.min(...arr); i <= Math.max(...arr); i++) {
+      count += i;
+    }
+    return count;
+  });
+}
+
+console.log(sumAll([10, 5]));
