@@ -1,15 +1,16 @@
 body {
-  background-color: darkslategray;
+  background-color: #dfe4ea;
 }
 
 body h1 {
   font-family: monospace;
   text-align: center;
   font-size: 48px;
+  color: #2f3542;
 }
 
 body h1 span {
-  color: deeppink;
+  color: #1e90ff;
   font-style: italic;
 }
 
@@ -17,6 +18,6 @@ body p {
   font-family: monospace;
   text-align: center;
   font-size: 18px;
-  color: whitesmoke;
+  color: #2f3542;
 }
 /*# sourceMappingURL=style.css.map */

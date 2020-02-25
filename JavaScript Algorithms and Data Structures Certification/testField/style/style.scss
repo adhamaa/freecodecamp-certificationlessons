@@ -1,11 +1,13 @@
 body {
-  background-color: darkslategray;
+  background-color: #dfe4ea;
   h1 {
     font-family: monospace;
     text-align: center;
     font-size: 48px;
+    color: #2f3542;
+
     span {
-      color: deeppink;
+      color: #1e90ff;
       font-style: italic;
       // font-size: 32px;
     }
@@ -14,6 +16,6 @@ body {
     font-family: monospace;
     text-align: center;
     font-size: 18px;
-    color: whitesmoke;
+    color: #2f3542;
   }
 }
