@@ -9,6 +9,7 @@ body {
     span {
       color: #1e90ff;
       font-style: italic;
+      text-shadow: #1e90ff 0 0 5px;
       // font-size: 32px;
     }
   }
@@ -35,19 +36,19 @@ body {
       border-radius: 4px;
       padding: 15px 20px 15px 20px;
       margin: 25px;
-      box-shadow: rgba(3, 3, 3, 0.521) 0 5px 15px 1px;
+      box-shadow: rgba(3, 3, 3, 0.356) 0 3px 8px 1px;
       min-height: 10vh;
     }
     section.item1 {
-      // border: 2px solid #2f3542;
+      border: 1px solid #2f3542;
       background-color: #ff6b81;
     }
     section.item2 {
-      // border: 2px solid #2f3542;
+      border: 1px solid #2f3542;
       background-color: #ff7f50;
     }
     section.item3 {
-      // border: 2px solid #2f3542;
+      border: 1px solid #2f3542;
       background-color: #eccc68;
     }
   }
