@@ -16,6 +16,39 @@ body {
     font-family: monospace;
     text-align: center;
     font-size: 18px;
+    font-weight: bold;
     color: #2f3542;
+  }
+  main {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    // column-gap: 30px;
+    row-gap: 30px;
+    text-align: justify;
+    section {
+      font-family: monospace;
+      font-size: 16px;
+      font-weight: lighter;
+      color: #2f3542;
+      border-radius: 4px;
+      padding: 15px 20px 15px 20px;
+      margin: 25px;
+      box-shadow: rgba(3, 3, 3, 0.521) 0 5px 15px 1px;
+      min-height: 10vh;
+    }
+    section.item1 {
+      // border: 2px solid #2f3542;
+      background-color: #ff6b81;
+    }
+    section.item2 {
+      // border: 2px solid #2f3542;
+      background-color: #ff7f50;
+    }
+    section.item3 {
+      // border: 2px solid #2f3542;
+      background-color: #eccc68;
+    }
   }
 }
