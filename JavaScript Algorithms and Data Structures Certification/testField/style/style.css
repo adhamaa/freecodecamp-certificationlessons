@@ -15,6 +15,10 @@ body h1 span {
   text-shadow: #1e90ff 0 0 5px;
 }
 
+body h1 span.ar-text {
+  font-family: "amiri";
+}
+
 body p {
   font-family: monospace;
   text-align: center;
