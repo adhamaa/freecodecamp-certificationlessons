@@ -95,15 +95,52 @@ var result = mapped.map(function(el){
   return list[el.index];
 }); */
 
-function sumAll(arr) {
-  return arr.reduce((initial, secondValue) => {
-    let count = 0;
-    console.log(initial, secondValue);
-    for (let i = Math.min(...arr); i <= Math.max(...arr); i++) {
-      count += i;
+// function sumAll(arr) {
+//   return arr.reduce((initial, secondValue) => {
+//     let count = 0;
+//     // console.log(initial, secondValue);
+//     for (let i = Math.min(...arr); i <= Math.max(...arr); i++) {
+//       // console.log(...arr);
+//       count += i;
+//     }
+//     return count;
+//   });
+// }
+
+// console.log(sumAll([10, 5]));
+
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  var keys = Object.keys(source);
+  var arr = [];
+  var control = 0;
+
+  // Only change code below this line
+  for (var i = 0; i < collection.length; i++) {
+    control = 0;
+    for (var x = 0; x < keys.length; x++) {
+      var prop = keys[x];
+      if (collection[i].hasOwnProperty(prop)) {
+        if (collection[i][prop] === source[prop]) {
+          control++;
+        }
+      }
+      if (control === keys.length) {
+        arr.push(collection[i]);
+      }
     }
-    return count;
-  });
+  }
+  // Only change code above this line
+  return arr;
 }
 
-console.log(sumAll([10, 5]));
+console.log(
+  whatIsInAName(
+    [
+      { first: "Romeo", last: "Montague" }, //collection[0]
+      { first: "Mercutio", last: null }, //collection[1]
+      { first: "Tybalt", last: "Capulet" } //collection[2]
+    ],
+    { last: "Capulet" }
+  )
+);
