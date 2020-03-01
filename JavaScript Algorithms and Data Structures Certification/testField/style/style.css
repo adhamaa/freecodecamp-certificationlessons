@@ -31,10 +31,8 @@ body main {
   display: -ms-grid;
   display: grid;
   padding: 20px;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+  -ms-grid-columns: (3fr)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 3fr);
   row-gap: 30px;
   text-align: justify;
 }
@@ -53,17 +51,46 @@ body main section {
 }
 
 body main section.item1 {
-  border: 1px solid #2f3542;
+  grid-area: item1;
   background-color: #ff6b81;
 }
 
 body main section.item2 {
-  border: 1px solid #2f3542;
+  grid-area: item2;
   background-color: #ff7f50;
 }
 
 body main section.item3 {
-  border: 1px solid #2f3542;
+  grid-area: item3;
   background-color: #eccc68;
+}
+
+body main section.item4 {
+  grid-area: item4;
+  border: 1px solid #2f3542;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.item4 a {
+  color: red;
+  text-decoration: none;
+}
+
+body main section.item4 a:hover {
+  color: royalblue;
+}
+
+@media (max-width: 50vw) {
+  body main {
+        grid-template-areas: "item1 item2" "item3 item4";
+  }
 }
 /*# sourceMappingURL=style.css.map */

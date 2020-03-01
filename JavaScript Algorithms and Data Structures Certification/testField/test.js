@@ -111,29 +111,17 @@ var result = mapped.map(function(el){
 
 function whatIsInAName(collection, source) {
   // What's in a name?
-  var keys = Object.keys(source);
-  var arr = [];
-  var control = 0;
-
+  let arr = [];
+  let srcKeys = Object.keys(source);
+  let srcVals = Object.values(source);
   // Only change code below this line
-  for (var i = 0; i < collection.length; i++) {
-    control = 0;
-    for (var x = 0; x < keys.length; x++) {
-      var prop = keys[x];
-      if (collection[i].hasOwnProperty(prop)) {
-        if (collection[i][prop] === source[prop]) {
-          control++;
-        }
-      }
-      if (control === keys.length) {
-        arr.push(collection[i]);
-      }
-    }
-  }
+  return collection.filter(i => {
+    return srcKeys.forEach(j => {});
+  });
+
   // Only change code above this line
   return arr;
 }
-
 console.log(
   whatIsInAName(
     [
@@ -144,3 +132,18 @@ console.log(
     { last: "Capulet" }
   )
 );
+
+// var ns = [1, 2, 3, 4, 5];
+// var filtered = ns.filter(num => num !== 2);
+// console.log("ns:", ns);
+// console.log("filtered:", filtered);
+
+function destroyer(arr, ...vRemove) {
+  // Remove all the values
+  var filtered = arr.filter(val => {
+    return !vRemove.includes(val);
+  });
+  return filtered;
+}
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
