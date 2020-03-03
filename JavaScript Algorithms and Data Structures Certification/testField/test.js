@@ -109,40 +109,40 @@ var result = mapped.map(function(el){
 
 // console.log(sumAll([10, 5]));
 
-function whatIsInAName(collection, source) {
-  // What's in a name?
-  let arr = [];
-  let srcKeys = Object.keys(source); //?
-  let srcVals = Object.values(source);
-  // Only change code below this line
-  return collection.filter(obj => {
-    for (i in srcKeys) {
-      if (
-        !obj.hasOwnProperty(srcKeys[i]) ||
-        obj[srcKeys[i]] !== source[srcKeys[i]]
-      ) {
-        console.log("source[srcKeys[i]]:", source[srcKeys[i]]);
-        console.log("obj[srcKeys[i]]:", obj[srcKeys[i]]);
-        return false;
-      }
-      return true;
-    }
-  });
-}
+// function whatIsInAName(collection, source) {
+//   // What's in a name?
+//   let arr = [];
+//   let srcKeys = Object.keys(source); //?
+//   let srcVals = Object.values(source);
+//   // Only change code below this line
+//   return collection.filter(obj => {
+//     for (i in srcKeys) {
+//       if (
+//         !obj.hasOwnProperty(srcKeys[i]) ||
+//         obj[srcKeys[i]] !== source[srcKeys[i]]
+//       ) {
+//         console.log("source[srcKeys[i]]:", source[srcKeys[i]]);
+//         console.log("obj[srcKeys[i]]:", obj[srcKeys[i]]);
+//         return false;
+//       }
+//       return true;
+//     }
+//   });
+// }
 
-// Only change code above this line
-// return arr;
+// // Only change code above this line
+// // return arr;
 
-console.log(
-  whatIsInAName(
-    [
-      { first: "Romeo", last: "Montague" }, //collection[0]
-      { first: "Mercutio", last: null }, //collection[1]
-      { first: "Tybalt", last: "Capulet" } //collection[2]
-    ],
-    { last: "Capulet" }
-  )
-);
+// console.log(
+//   whatIsInAName(
+//     [
+//       { first: "Romeo", last: "Montague" }, //collection[0]
+//       { first: "Mercutio", last: null }, //collection[1]
+//       { first: "Tybalt", last: "Capulet" } //collection[2]
+//     ],
+//     { last: "Capulet" }
+//   )
+// );
 
 // var ns = [1, 2, 3, 4, 5];
 // var filtered = ns.filter(num => num !== 2);
@@ -158,3 +158,19 @@ console.log(
 // }
 
 // console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+function myReplace(str, before, after) {
+  return str.replace(before, () =>
+    before.match(/^[A-Z]/)
+      ? (after = after.charAt(0).toUpperCase() + after.slice(1))
+      : (after = after.charAt(0).toLowerCase() + after.slice(1))
+  );
+}
+
+console.log(
+  myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped")
+);
+console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
+console.log(myReplace("This has a spellngi error", "spellngi", "spelling"));
+console.log(myReplace("His name is Tom", "Tom", "john"));
+console.log(myReplace("Notice me senpai", "senpai", "Brother"));
