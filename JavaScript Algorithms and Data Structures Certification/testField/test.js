@@ -112,16 +112,27 @@ var result = mapped.map(function(el){
 function whatIsInAName(collection, source) {
   // What's in a name?
   let arr = [];
-  let srcKeys = Object.keys(source);
+  let srcKeys = Object.keys(source); //?
   let srcVals = Object.values(source);
   // Only change code below this line
-  return collection.filter(i => {
-    return srcKeys.forEach(j => {});
+  return collection.filter(obj => {
+    for (i in srcKeys) {
+      if (
+        !obj.hasOwnProperty(srcKeys[i]) ||
+        obj[srcKeys[i]] !== source[srcKeys[i]]
+      ) {
+        console.log("source[srcKeys[i]]:", source[srcKeys[i]]);
+        console.log("obj[srcKeys[i]]:", obj[srcKeys[i]]);
+        return false;
+      }
+      return true;
+    }
   });
-
-  // Only change code above this line
-  return arr;
 }
+
+// Only change code above this line
+// return arr;
+
 console.log(
   whatIsInAName(
     [
@@ -138,12 +149,12 @@ console.log(
 // console.log("ns:", ns);
 // console.log("filtered:", filtered);
 
-function destroyer(arr, ...vRemove) {
-  // Remove all the values
-  var filtered = arr.filter(val => {
-    return !vRemove.includes(val);
-  });
-  return filtered;
-}
+// function destroyer(arr, ...vRemove) {
+//   // Remove all the values
+//   var filtered = arr.filter(val => {
+//     return !vRemove.includes(val);
+//   });
+//   return filtered;
+// }
 
-console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
