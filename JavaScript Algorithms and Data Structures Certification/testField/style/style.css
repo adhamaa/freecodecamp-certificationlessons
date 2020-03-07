@@ -92,7 +92,7 @@ body main section.item4 a:hover {
   color: royalblue;
 }
 
-body svg#logo-round-cap {
+body svg#logo-proton {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -102,60 +102,46 @@ body svg#logo-round-cap {
           animation: fill 0.5s ease forwards 4s;
 }
 
-body svg#logo-round-cap path:nth-child(1) {
-  stroke-dasharray: 536px;
-  stroke-dashoffset: 536px;
+body svg#logo-proton path:nth-child(1) {
+  stroke-dasharray: 411px;
+  stroke-dashoffset: 411px;
   -webkit-animation: line-anim 2s ease forwards;
           animation: line-anim 2s ease forwards;
 }
 
-body svg#logo-round-cap path:nth-child(2) {
-  stroke-dasharray: 461px;
-  stroke-dashoffset: 461px;
+body svg#logo-proton path:nth-child(2) {
+  stroke-dasharray: 491px;
+  stroke-dashoffset: 491px;
   -webkit-animation: line-anim 2s ease forwards 0.3s;
           animation: line-anim 2s ease forwards 0.3s;
 }
 
-body svg#logo-round-cap path:nth-child(3) {
-  stroke-dasharray: 487px;
-  stroke-dashoffset: 487px;
+body svg#logo-proton path:nth-child(3) {
+  stroke-dasharray: 565px;
+  stroke-dashoffset: 565px;
   -webkit-animation: line-anim 2s ease forwards 0.6s;
           animation: line-anim 2s ease forwards 0.6s;
 }
 
-body svg#logo-round-cap path:nth-child(4) {
-  stroke-dasharray: 241px;
-  stroke-dashoffset: 241px;
+body svg#logo-proton path:nth-child(4) {
+  stroke-dasharray: 310px;
+  stroke-dashoffset: 310px;
   -webkit-animation: line-anim 2s ease forwards 0.9s;
           animation: line-anim 2s ease forwards 0.9s;
 }
 
-body svg#logo-round-cap path:nth-child(5) {
-  stroke-dasharray: 607px;
-  stroke-dashoffset: 607px;
+body svg#logo-proton path:nth-child(5) {
+  stroke-dasharray: 565px;
+  stroke-dashoffset: 565px;
   -webkit-animation: line-anim 2s ease forwards 1.2s;
           animation: line-anim 2s ease forwards 1.2s;
 }
 
-body svg#logo-round-cap path:nth-child(6) {
-  stroke-dasharray: 585px;
-  stroke-dashoffset: 585px;
+body svg#logo-proton path:nth-child(6) {
+  stroke-dasharray: 433px;
+  stroke-dashoffset: 433px;
   -webkit-animation: line-anim 2s ease forwards 1.5s;
           animation: line-anim 2s ease forwards 1.5s;
-}
-
-body svg#logo-round-cap path:nth-child(7) {
-  stroke-dasharray: 461px;
-  stroke-dashoffset: 461px;
-  -webkit-animation: line-anim 2s ease forwards 1.8s;
-          animation: line-anim 2s ease forwards 1.8s;
-}
-
-body svg#logo-round-cap path:nth-child(8) {
-  stroke-dasharray: 529px;
-  stroke-dashoffset: 529px;
-  -webkit-animation: line-anim 2s ease forwards 2.1s;
-          animation: line-anim 2s ease forwards 2.1s;
 }
 
 @-webkit-keyframes line-anim {

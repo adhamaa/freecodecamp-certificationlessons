@@ -76,52 +76,52 @@ body {
     }
   }
 
-  svg#logo-round-cap {
+  svg#logo-proton {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: fill 0.5s ease forwards 4s;
     path:nth-child(1) {
-      stroke-dasharray: 536px;
-      stroke-dashoffset: 536px;
+      stroke-dasharray: 411px;
+      stroke-dashoffset: 411px;
       animation: line-anim 2s ease forwards;
     }
     path:nth-child(2) {
-      stroke-dasharray: 461px;
-      stroke-dashoffset: 461px;
+      stroke-dasharray: 491px;
+      stroke-dashoffset: 491px;
       animation: line-anim 2s ease forwards 0.3s;
     }
     path:nth-child(3) {
-      stroke-dasharray: 487px;
-      stroke-dashoffset: 487px;
+      stroke-dasharray: 565px;
+      stroke-dashoffset: 565px;
       animation: line-anim 2s ease forwards 0.6s;
     }
     path:nth-child(4) {
-      stroke-dasharray: 241px;
-      stroke-dashoffset: 241px;
+      stroke-dasharray: 310px;
+      stroke-dashoffset: 310px;
       animation: line-anim 2s ease forwards 0.9s;
     }
     path:nth-child(5) {
-      stroke-dasharray: 607px;
-      stroke-dashoffset: 607px;
+      stroke-dasharray: 565px;
+      stroke-dashoffset: 565px;
       animation: line-anim 2s ease forwards 1.2s;
     }
     path:nth-child(6) {
-      stroke-dasharray: 585px;
-      stroke-dashoffset: 585px;
+      stroke-dasharray: 433px;
+      stroke-dashoffset: 433px;
       animation: line-anim 2s ease forwards 1.5s;
     }
-    path:nth-child(7) {
-      stroke-dasharray: 461px;
-      stroke-dashoffset: 461px;
-      animation: line-anim 2s ease forwards 1.8s;
-    }
-    path:nth-child(8) {
-      stroke-dasharray: 529px;
-      stroke-dashoffset: 529px;
-      animation: line-anim 2s ease forwards 2.1s;
-    }
+    // path:nth-child(7) {
+    //   stroke-dasharray: 461px;
+    //   stroke-dashoffset: 461px;
+    //   animation: line-anim 2s ease forwards 1.8s;
+    // }
+    // path:nth-child(8) {
+    //   stroke-dasharray: 529px;
+    //   stroke-dashoffset: 529px;
+    //   animation: line-anim 2s ease forwards 2.1s;
+    // }
   }
 
   @keyframes line-anim {

@@ -1,7 +1,8 @@
-/* const logo = document.querySelectorAll("#logo > path");
-for (let i = 0; i < logo.length; i++) {
-  // console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
-} */
+// const logo = document.querySelectorAll("#logo-proton > path");
+// console.log("logo:", logo);
+// for (let i = 0; i < logo.length; i++) {
+//   console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
+// }
 
 // Return each strand as an array of two elements, the original and the pair.
 // var paired = [];
@@ -54,11 +55,15 @@ let fetch = () => {
     { code: 600, text: "Not a real code" }
   ];
   let num = Math.floor(Math.random() * codes.length);
+  console.log("codes:", codes);
+  console.log("first code: ", codes[0].code);
   console.log("num:", num);
   return codes[num];
 };
 
 let response = fetch();
+console.log("response.code:", response.code);
+console.log("response.text:", response.text);
 // console.log(response);
 switch (response.code) {
   case 200:
@@ -102,3 +107,23 @@ switch (name.length) {
   default:
     console.log("The f**k!");
 }
+
+function pairElement(str) {
+  //create object for pair lookup
+  var pairs = {
+    A: "T",
+    T: "A",
+    C: "G",
+    G: "C"
+  };
+  //split string into array of characters
+  var arr = str.split("");
+  console.log("arr:", arr);
+  //map character to array of character and matching pair
+  return arr.map(x => {
+    return [x, pairs[x]];
+    console.log("pairs[x]:", pairs[x]);
+  });
+}
+
+console.log(pairElement("GCG"));
