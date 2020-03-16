@@ -144,6 +144,12 @@ body svg#logo-proton path:nth-child(6) {
           animation: line-anim 2s ease forwards 1.5s;
 }
 
+body iframe {
+  margin: 0 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
 @-webkit-keyframes line-anim {
   to {
     stroke-dashoffset: 0;

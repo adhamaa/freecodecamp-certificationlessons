@@ -127,3 +127,18 @@ function pairElement(str) {
 }
 
 console.log(pairElement("GCG"));
+
+
+function smallestCommons(arr) {
+  const gcd = (a, b) => {
+  while (a !== b ){
+      if (a > b) {
+          a -= b;
+      } else {
+          b -= a;
+      }
+  }
+  return a
+};
+
+console.log(smallestCommons([1,5]));
