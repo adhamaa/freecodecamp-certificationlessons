@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  top: 20px;
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  align-items: center;
+}
+input.TrackNo:focus {
+  color: yellowgreen;
+}
+
+a {
+  font-weight: bold;
+}
+a:hover {
+  color: yellowgreen;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+input {
+  text-align: center;
+}

@@ -91,3 +91,27 @@ function addError(img, factor, x, y, errR, errG, errB) {
 
   setColorAtIndex(img, x, y, clr);
 }
+
+const people = [
+  {
+    name: "Dom",
+    occupation: "Software Developer"
+  },
+  {
+    name: "Eric",
+    occupation: "Dentist"
+  },
+  {
+    name: "Kate",
+    occupation: "Hair Dresser"
+  }
+];
+
+function isDentist(person) {
+  return person.occupation === "Hair Dresser";
+}
+
+console.log("people:", people);
+console.log(people.find(isDentist));
+
+console.log(people.findIndex(isDentist));

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="new.css" />
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"
@@ -12,5 +13,36 @@
     ></script>
     <script type="text/javascript" src="new.js"></script>
   </head>
-  <body></body>
+  <body>
+    <input
+      type="text"
+      id="TrackNo"
+      maxlength="50"
+      placeholder="Insert Tracking Number"
+    />
+    <input type="button" value="TRACK" onclick="inputTrack()" />
+    <script src="//www.tracking.my/track-button.js"></script>
+    <script>
+      function inputTrack() {
+        var num = document.getElementById("TrackNo").value;
+        if (num === "") {
+          alert("Please enter tracking number");
+          return;
+        }
+        TrackButton.track({
+          tracking_no: num
+        });
+      }
+    </script>
+    <a onclick="linkTrack(this.innerText)">ERB469123209MY</a>
+    <!-- <button onclick="linkTrack('ERB469123209MY')">TRACK</button> -->
+    <script src="//www.tracking.my/track-button.js"></script>
+    <script>
+      function linkTrack(num) {
+        TrackButton.track({
+          tracking_no: num
+        });
+      }
+    </script>
+  </body>
 </html>
