@@ -1,15 +1,48 @@
-const logo = document.querySelectorAll("#logo-proton > path");
-console.log("logo:", logo);
-for (let i = 0; i < logo.length; i++) {
-  console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
+// const logo = document.querySelectorAll("#logo-proton > path");
+// console.log("logo:", logo);
+// for (let i = 0; i < logo.length; i++) {
+//   console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
+// }
+
+// const yoga = document.querySelectorAll("#yoga > path");
+// console.log("yoga:", yoga);
+
+// for (let j = 0; j < yoga.length; j++) {
+//   console.log(`Letter ${j} is ${yoga[j].getTotalLength()}`);
+// }
+
+function dropElements(arr, func) {
+  var times = arr.length;
+  console.log("times:", times);
+  for (var i = 0; i < times; i++) {
+    console.log("arr[0]:", arr[0]);
+    if (func(arr[0])) {
+      break;
+    } else {
+      arr.shift();
+    }
+  }
+  return arr;
 }
 
-const yoga = document.querySelectorAll("#yoga > path");
-console.log("yoga:", yoga);
-
-for (let j = 0; j < yoga.length; j++) {
-  console.log(`Letter ${j} is ${yoga[j].getTotalLength()}`);
-}
+console.log(
+  dropElements([1, 2, 3], function(n) {
+    console.log("n:", n);
+    return n < 3;
+  })
+);
+console.log(
+  dropElements([0, 1, 0, 1], function(n) {
+    console.log("n:", n);
+    return n === 1;
+  })
+);
+console.log(
+  dropElements([1, 2, 3, 9, 2], function(n) {
+    console.log("n:", n);
+    return n > 2;
+  })
+);
 
 // Return each strand as an array of two elements, the original and the pair.
 // var paired = [];
