@@ -11,38 +11,50 @@
 //   console.log(`Letter ${j} is ${yoga[j].getTotalLength()}`);
 // }
 
-function dropElements(arr, func) {
-  var times = arr.length;
-  console.log("times:", times);
-  for (var i = 0; i < times; i++) {
-    console.log("arr[0]:", arr[0]);
-    if (func(arr[0])) {
-      break;
-    } else {
-      arr.shift();
-    }
-  }
-  return arr;
+// function dropElements(arr, func) {
+//   var times = arr.length;
+//   console.log("times:", times);
+//   for (var i = 0; i < times; i++) {
+//     console.log("arr[0]:", arr[0]);
+//     if (func(arr[0])) {
+//       break;
+//     } else {
+//       arr.shift();
+//     }
+//   }
+//   return arr;
+// }
+
+// console.log(
+//   dropElements([1, 2, 3], function (n) {
+//     console.log("n:", n);
+//     return n < 3;
+//   })
+// );
+// console.log(
+//   dropElements([0, 1, 0, 1], function (n) {
+//     console.log("n:", n);
+//     return n === 1;
+//   })
+// );
+// console.log(
+//   dropElements([1, 2, 3, 9, 2], function (n) {
+//     console.log("n:", n);
+//     return n > 2;
+//   })
+// );
+
+function printName(options) {
+  const defaults = {
+    firstName: "Steve",
+    lastName: "Bottle",
+  };
+  options = Object.assign(defaults, options);
+
+  console.log(`${options.firstName} ${options.lastName}`);
 }
 
-console.log(
-  dropElements([1, 2, 3], function(n) {
-    console.log("n:", n);
-    return n < 3;
-  })
-);
-console.log(
-  dropElements([0, 1, 0, 1], function(n) {
-    console.log("n:", n);
-    return n === 1;
-  })
-);
-console.log(
-  dropElements([1, 2, 3, 9, 2], function(n) {
-    console.log("n:", n);
-    return n > 2;
-  })
-);
+printName({ lastName: "Bamboozle" });
 
 // Return each strand as an array of two elements, the original and the pair.
 // var paired = [];
