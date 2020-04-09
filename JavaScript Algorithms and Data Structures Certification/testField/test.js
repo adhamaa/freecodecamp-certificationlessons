@@ -44,17 +44,17 @@
 //   })
 // );
 
-function printName(options) {
-  const defaults = {
-    firstName: "Steve",
-    lastName: "Bottle",
-  };
-  options = Object.assign(defaults, options);
+// function printName(options) {
+//   const defaults = {
+//     firstName: "Steve",
+//     lastName: "Bottle",
+//   };
+//   options = Object.assign(defaults, options);
 
-  console.log(`${options.firstName} ${options.lastName}`);
-}
+//   console.log(`${options.firstName} ${options.lastName}`);
+// }
 
-printName({ lastName: "Bamboozle" });
+// printName({ lastName: "Bamboozle" });
 
 // Return each strand as an array of two elements, the original and the pair.
 // var paired = [];
@@ -193,3 +193,37 @@ printName({ lastName: "Bamboozle" });
 // };
 
 // console.log(smallestCommons([1,5]));
+
+function convertToRoman(num) {
+  var map = {
+    M: 1000,
+    CM: 900,
+    D: 500,
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1,
+  };
+  var roman = "";
+  for (var i in map) {
+    console.log("i:", i);
+
+    while (num >= map[i]) {
+      // roman += i;
+      console.log("roman += i:", (roman += i));
+      // num -= map[i];
+      console.log("num -= map[i]:", (num -= map[i]));
+    }
+  }
+
+  return roman;
+}
+
+//test
+console.log(convertToRoman(1));
