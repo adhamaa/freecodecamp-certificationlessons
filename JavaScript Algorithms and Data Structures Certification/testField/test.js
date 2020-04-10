@@ -280,11 +280,18 @@ function plusMinus(arr) {
 plusMinus([-4, 3, -9, 0, 4, 1]);
 
 function staircase(n) {
-  let d = "";
-  function makeLine() {
-    d += "\n";
+  var height = n;
+  for (var i = 0; i < height; i++) {
+    var row = "";
+    for (var j = 0; j < height; j++) {
+      if (i + j > height - 2) {
+        row += "#";
+      } else {
+        row += " ";
+      }
+    }
+    console.log(row);
   }
-  makeLine();
-  console.log(d);
 }
-staircase();
+
+staircase(6);
