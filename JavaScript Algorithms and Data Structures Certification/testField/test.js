@@ -194,36 +194,97 @@
 
 // console.log(smallestCommons([1,5]));
 
-function convertToRoman(num) {
-  var map = {
-    M: 1000,
-    CM: 900,
-    D: 500,
-    CD: 400,
-    C: 100,
-    XC: 90,
-    L: 50,
-    XL: 40,
-    X: 10,
-    IX: 9,
-    V: 5,
-    IV: 4,
-    I: 1,
-  };
-  var roman = "";
-  for (var i in map) {
+// function convertToRoman(num) {
+//   var map = {
+//     M: 1000,
+//     CM: 900,
+//     D: 500,
+//     CD: 400,
+//     C: 100,
+//     XC: 90,
+//     L: 50,
+//     XL: 40,
+//     X: 10,
+//     IX: 9,
+//     V: 5,
+//     IV: 4,
+//     I: 1,
+//   };
+//   var roman = "";
+//   for (var i in map) {
+//     console.log("i:", i);
+
+//     while (num >= map[i]) {
+//       // roman += i;
+//       console.log("roman += i:", (roman += i));
+//       // num -= map[i];
+//       console.log("num -= map[i]:", (num -= map[i]));
+//     }
+//   }
+
+//   return roman;
+// }
+
+// //test
+// console.log(convertToRoman(1));
+
+function compareTriplets(a, b) {
+  let result = [];
+  let aCount = 0;
+  let bCount = 0;
+  a.forEach((i, j) => {
     console.log("i:", i);
-
-    while (num >= map[i]) {
-      // roman += i;
-      console.log("roman += i:", (roman += i));
-      // num -= map[i];
-      console.log("num -= map[i]:", (num -= map[i]));
-    }
-  }
-
-  return roman;
+    console.log("j:", j);
+    i === j ? null : i > j ? aCount++ : bCount++;
+  });
+  result = [aCount, bCount];
+  return result;
 }
 
-//test
-console.log(convertToRoman(1));
+console.log(compareTriplets([5, 6, 7], [3, 6, 10]));
+console.log(compareTriplets([17, 28, 30], [99, 16, 8]));
+
+function aVeryBigSum(ar) {
+  let sum = 0;
+  for (let i = 0; i < ar.length; i++) {
+    sum += ar[i];
+  }
+  return sum;
+  // return ar.reduce((acc, curr) => acc + curr);
+}
+
+console.log(
+  aVeryBigSum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005])
+);
+
+function plusMinus(arr) {
+  let n = arr.length,
+    positive = 0,
+    negative = 0,
+    zero = 0;
+  arr.forEach((i) => {
+    if (i > 0) {
+      positive++;
+    } else if (i < 0) {
+      negative++;
+    } else {
+      zero++;
+    }
+  });
+  let pos = (positive / n).toFixed(6),
+    neg = (negative / n).toFixed(6),
+    zer = (zero / n).toFixed(6);
+
+  console.log(pos + "\n" + neg + "\n" + zer);
+}
+plusMinus([-4, 3, -9, 0, 4, 1]);
+
+function staircase(n) {
+  let d = "";
+  function makeLine() {
+    d += "\n";
+  }
+  makeLine();
+  console.log(d);
+}
+staircase();
