@@ -228,64 +228,94 @@
 // //test
 // console.log(convertToRoman(1));
 
-function compareTriplets(a, b) {
-  let result = [];
-  let aCount = 0;
-  let bCount = 0;
-  a.forEach((i, j) => {
-    console.log("i:", i);
-    console.log("j:", j);
-    i === j ? null : i > j ? aCount++ : bCount++;
-  });
-  result = [aCount, bCount];
-  return result;
-}
+// function compareTriplets(a, b) {
+//   let result = [];
+//   let aCount = 0;
+//   let bCount = 0;
+//   a.forEach((i, j) => {
+//     console.log("i:", i);
+//     console.log("j:", j);
+//     i === j ? null : i > j ? aCount++ : bCount++;
+//   });
+//   result = [aCount, bCount];
+//   return result;
+// }
 
-console.log(compareTriplets([5, 6, 7], [3, 6, 10]));
-console.log(compareTriplets([17, 28, 30], [99, 16, 8]));
+// console.log(compareTriplets([5, 6, 7], [3, 6, 10]));
+// console.log(compareTriplets([17, 28, 30], [99, 16, 8]));
 
-function aVeryBigSum(ar) {
-  let sum = 0;
-  for (let i = 0; i < ar.length; i++) {
-    sum += ar[i];
-  }
-  return sum;
-  // return ar.reduce((acc, curr) => acc + curr);
-}
+// function aVeryBigSum(ar) {
+//   let sum = 0;
+//   for (let i = 0; i < ar.length; i++) {
+//     sum += ar[i];
+//   }
+//   return sum;
+//   // return ar.reduce((acc, curr) => acc + curr);
+// }
 
-console.log(
-  aVeryBigSum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005])
-);
+// console.log(
+//   aVeryBigSum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005])
+// );
 
-function plusMinus(arr) {
-  let n = arr.length,
-    positive = 0,
-    negative = 0,
-    zero = 0;
-  arr.forEach((i) => {
-    if (i > 0) {
-      positive++;
-    } else if (i < 0) {
-      negative++;
-    } else {
-      zero++;
+// function plusMinus(arr) {
+//   let n = arr.length,
+//     positive = 0,
+//     negative = 0,
+//     zero = 0;
+//   arr.forEach((i) => {
+//     if (i > 0) {
+//       positive++;
+//     } else if (i < 0) {
+//       negative++;
+//     } else {
+//       zero++;
+//     }
+//   });
+//   let pos = (positive / n).toFixed(6),
+//     neg = (negative / n).toFixed(6),
+//     zer = (zero / n).toFixed(6);
+
+//   console.log(pos + "\n" + neg + "\n" + zer);
+// }
+// plusMinus([-4, 3, -9, 0, 4, 1]);
+
+function sstaircase(n) {
+  let i = 0;
+  while (i < n) {
+    i++;
+    let result = "";
+    let j = 0;
+    while (j < n) {
+      j++;
+      if (i < j + 1) {
+        result += ". ";
+      } else {
+        result += " ";
+      }
     }
-  });
-  let pos = (positive / n).toFixed(6),
-    neg = (negative / n).toFixed(6),
-    zer = (zero / n).toFixed(6);
-
-  console.log(pos + "\n" + neg + "\n" + zer);
+    console.log(result);
+  }
 }
-plusMinus([-4, 3, -9, 0, 4, 1]);
+sstaircase(15);
 
 function staircase(n) {
-  var height = n;
-  for (var i = 0; i < height; i++) {
-    var row = "";
-    for (var j = 0; j < height; j++) {
-      if (i + j > height - 2) {
-        row += "#";
+  let height = n;
+  for (let i = 0; i < height; i++) {
+    let row = "";
+    for (let j = 0; j < height; j++) {
+      if (i + j >= height - 1) {
+        row += ". ";
+      } else {
+        row += " ";
+      }
+    }
+    console.log(row);
+  }
+  for (let i = 0; i < height; i++) {
+    let row = "";
+    for (let j = 0; j < height; j++) {
+      if (i < j + 1) {
+        row += ". ";
       } else {
         row += " ";
       }
@@ -293,5 +323,62 @@ function staircase(n) {
     console.log(row);
   }
 }
+staircase(15);
 
-staircase(6);
+function dstaircase(n) {
+  let i = 0;
+  while (i < n) {
+    i++;
+    let result = "";
+    let j = 0;
+    while (j < n) {
+      j++;
+      if (i + j > n) {
+        result += ". ";
+      } else {
+        result += " ";
+      }
+    }
+    console.log(result);
+  }
+}
+dstaircase(15);
+
+function starcase(n) {
+  var height = n;
+  for (let i = 0; i < height; i++) {
+    let row = "";
+    for (let j = 0; j < height; j++) {
+      i < j + 1 ? (row += ". ") : (row += " ");
+    }
+    console.log(row);
+  }
+  for (let i = 0; i < height; i++) {
+    let row = "";
+    for (let j = 0; j < height; j++) {
+      i + j >= height - 1 ? (row += ". ") : (row += " ");
+    }
+    console.log(row);
+  }
+}
+starcase(15);
+
+const operate = (arr) => {
+  let gen = Array.from({ length: arr + 1 }, (_, i) => i);
+  console.log(gen);
+  function isPrime(x) {
+    for (let i = 2; i < x; i++) {
+      if (x % i === 0) return false;
+    }
+    return x !== 1 && x !== 0;
+  }
+  gen.forEach((i) => (isPrime(i) ? i + " <++++++<" : i + " O"));
+};
+console.log(operate(13));
+
+function modulo(n) {
+  for (var i = 2; i < 20; i++) {
+    console.log(i + " --> " + (i % n));
+  }
+}
+modulo(3);
