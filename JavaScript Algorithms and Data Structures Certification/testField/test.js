@@ -279,106 +279,219 @@
 // }
 // plusMinus([-4, 3, -9, 0, 4, 1]);
 
-function sstaircase(n) {
-  let i = 0;
-  while (i < n) {
-    i++;
-    let result = "";
-    let j = 0;
-    while (j < n) {
-      j++;
-      if (i < j + 1) {
-        result += ". ";
-      } else {
-        result += " ";
+// function sstaircase(n) {
+//   let i = 0;
+//   while (i < n) {
+//     i++;
+//     let result = "";
+//     let j = 0;
+//     while (j < n) {
+//       j++;
+//       if (i < j + 1) {
+//         result += ". ";
+//       } else {
+//         result += " ";
+//       }
+//     }
+//     console.log(result);
+//   }
+// }
+// sstaircase(15);
+
+// function staircase(n) {
+//   let height = n;
+//   for (let i = 0; i < height; i++) {
+//     let row = "";
+//     for (let j = 0; j < height; j++) {
+//       if (i + j >= height - 1) {
+//         row += ". ";
+//       } else {
+//         row += " ";
+//       }
+//     }
+//     console.log(row);
+//   }
+//   for (let i = 0; i < height; i++) {
+//     let row = "";
+//     for (let j = 0; j < height; j++) {
+//       if (i < j + 1) {
+//         row += ". ";
+//       } else {
+//         row += " ";
+//       }
+//     }
+//     console.log(row);
+//   }
+// }
+// staircase(15);
+
+// function dstaircase(n) {
+//   let i = 0;
+//   while (i < n) {
+//     i++;
+//     let result = "";
+//     let j = 0;
+//     while (j < n) {
+//       j++;
+//       if (i + j > n) {
+//         result += ". ";
+//       } else {
+//         result += " ";
+//       }
+//     }
+//     console.log(result);
+//   }
+// }
+// dstaircase(15);
+
+// function starcase(n) {
+//   var height = n;
+//   for (let i = 0; i < height; i++) {
+//     let row = "";
+//     for (let j = 0; j < height; j++) {
+//       i < j + 1 ? (row += ". ") : (row += " ");
+//     }
+//     console.log(row);
+//   }
+//   for (let i = 0; i < height; i++) {
+//     let row = "";
+//     for (let j = 0; j < height; j++) {
+//       i + j >= height - 1 ? (row += ". ") : (row += " ");
+//     }
+//     console.log(row);
+//   }
+// }
+// starcase(15);
+
+// const operate = (arr) => {
+//   let gen = Array.from({ length: arr + 1 }, (_, i) => i);
+//   console.log(gen);
+//   function isPrime(x) {
+//     for (let i = 2; i < x; i++) {
+//       if (x % i === 0) return false;
+//     }
+//     return x !== 1 && x !== 0;
+//   }
+//   gen.forEach((i) => (isPrime(i) ? i + " <++++++<" : i + " O"));
+// };
+// console.log(operate(13));
+
+// function modulo(n) {
+//   for (var i = 2; i < 20; i++) {
+//     console.log(i + " --> " + (i % n));
+//   }
+// }
+// modulo(3);
+
+// function rot13(str) {
+//   return str
+//     .split("") // Split str into a character array
+//     .map.call(str, (char) => {
+//       // Iterate over each character in the array
+//       var x = char.charCodeAt(0); // Convert char to a character code
+//       // Checks if character lies between A-Z
+//       return x < 65 || x > 90
+//         ? String.fromCharCode(x)
+//         : String.fromCharCode((x % 26) + 65);
+//     })
+//     .join(""); // Rejoin the array into a string
+// }
+
+// console.log(rot13("SERR PBQR PNZC"));
+
+// function telephoneCheck(str) {
+//   return /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/.test(str);
+// }
+
+// console.log(telephoneCheck("555-555-5555"));
+
+// Create an array of objects which hold the denominations and their values
+function checkCashRegister(price, cash, cid) {
+  //declare and initialize variables
+  var change = Math.round((cash - price) * 100);
+  var value = 0;
+  var changeRecord = [];
+  var stats = null;
+  var currency = [1, 5, 10, 25, 100, 500, 1000, 2000, 10000];
+  //convert all floats to integers due to floating point number issue
+  cid.forEach((el) => (el[1] = Math.round(el[1] * 100)));
+  //helper function to check if sufficient cash for change is in the drawer
+  function enoughFund(cid) {
+    var sum = cid.filter((el, i) => change >= currency[i]);
+    return sum.reduce((a, b) => {
+      return a + b[1];
+    }, 0);
+  }
+
+  //Actual program/control flow starts here
+  if (enoughFund(cid) < change) return "Insufficient Funds";
+  else if (enoughFund(cid) === change) return "Closed";
+  else {
+    for (var i = cid.length - 1; i > -1; i--) {
+      value = 0;
+      while (cid[i][1] > 0 && change >= currency[i]) {
+        //update everything as long as condition is true
+        change -= currency[i];
+        cid[i][1] -= currency[i];
+        //value keeps track of the amount of each currency unit as change
+        value += currency[i];
       }
+      if (value) changeRecord.push([cid[i][0], value]);
     }
-    console.log(result);
   }
+  //divide each array by 100 to display a proper money format
+  changeRecord.forEach((el) => (el[1] = el[1] / 100));
+  return { status: stats, change: changeRecord };
 }
-sstaircase(15);
 
-function staircase(n) {
-  let height = n;
-  for (let i = 0; i < height; i++) {
-    let row = "";
-    for (let j = 0; j < height; j++) {
-      if (i + j >= height - 1) {
-        row += ". ";
-      } else {
-        row += " ";
-      }
-    }
-    console.log(row);
-  }
-  for (let i = 0; i < height; i++) {
-    let row = "";
-    for (let j = 0; j < height; j++) {
-      if (i < j + 1) {
-        row += ". ";
-      } else {
-        row += " ";
-      }
-    }
-    console.log(row);
-  }
+console.log(
+  checkCashRegister(19.5, 20, [
+    ["PENNY", 1.01],
+    ["NICKEL", 2.05],
+    ["DIME", 3.1],
+    ["QUARTER", 4.25],
+    ["ONE", 90],
+    ["FIVE", 55],
+    ["TEN", 20],
+    ["TWENTY", 60],
+    ["ONE HUNDRED", 100],
+  ])
+);
+console.log(
+  checkCashRegister(19.5, 20, [
+    ["PENNY", 0.01],
+    ["NICKEL", 0],
+    ["DIME", 0],
+    ["QUARTER", 0],
+    ["ONE", 0],
+    ["FIVE", 0],
+    ["TEN", 0],
+    ["TWENTY", 0],
+    ["ONE HUNDRED", 0],
+  ])
+);
+console.log(
+  checkCashRegister(19.5, 20, [
+    ["PENNY", 0.5],
+    ["NICKEL", 0],
+    ["DIME", 0],
+    ["QUARTER", 0],
+    ["ONE", 0],
+    ["FIVE", 0],
+    ["TEN", 0],
+    ["TWENTY", 0],
+    ["ONE HUNDRED", 0],
+  ])
+);
+
+var elements = [
+  { type: "fire", power: 100 },
+  { type: "water", power: 100 },
+  { type: "earth", power: 100 },
+  { type: "metal", power: 100 },
+  { type: "wood", power: 100 },
+];
+
+for (var i in elements) {
+  console.log(elements[i].type);
 }
-staircase(15);
-
-function dstaircase(n) {
-  let i = 0;
-  while (i < n) {
-    i++;
-    let result = "";
-    let j = 0;
-    while (j < n) {
-      j++;
-      if (i + j > n) {
-        result += ". ";
-      } else {
-        result += " ";
-      }
-    }
-    console.log(result);
-  }
-}
-dstaircase(15);
-
-function starcase(n) {
-  var height = n;
-  for (let i = 0; i < height; i++) {
-    let row = "";
-    for (let j = 0; j < height; j++) {
-      i < j + 1 ? (row += ". ") : (row += " ");
-    }
-    console.log(row);
-  }
-  for (let i = 0; i < height; i++) {
-    let row = "";
-    for (let j = 0; j < height; j++) {
-      i + j >= height - 1 ? (row += ". ") : (row += " ");
-    }
-    console.log(row);
-  }
-}
-starcase(15);
-
-const operate = (arr) => {
-  let gen = Array.from({ length: arr + 1 }, (_, i) => i);
-  console.log(gen);
-  function isPrime(x) {
-    for (let i = 2; i < x; i++) {
-      if (x % i === 0) return false;
-    }
-    return x !== 1 && x !== 0;
-  }
-  gen.forEach((i) => (isPrime(i) ? i + " <++++++<" : i + " O"));
-};
-console.log(operate(13));
-
-function modulo(n) {
-  for (var i = 2; i < 20; i++) {
-    console.log(i + " --> " + (i % n));
-  }
-}
-modulo(3);
