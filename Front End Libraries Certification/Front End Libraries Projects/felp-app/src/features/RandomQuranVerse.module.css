@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Lateef&family=Reem+Kufi&display=swap");
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em auto;
+  max-width: 350px;
+}
+
+table {
+  font-family: Lato, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 1em;
+}
+
+td,
+th {
+  border: 1px solid #dae2df;
+  text-align: left;
+  padding: 0.5rem;
+}
+
+tr:nth-child(even) {
+  background-color: #dae2df;
+}
+
+.arabic {
+  direction: rtl;
+  text-align: right;
+  font-size: 1.5rem;
+  /* font-family: "Aref Ruqaa", serif; */
+  /* font-family: "Reem Kufi", sans-serif; */
+  font-family: "Lateef", cursive;
+}

@@ -1,0 +1,95 @@
+a {
+  text-decoration: none;
+  color: #d17f7f;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1 {
+  font-size: 1.75rem;
+}
+svg {
+  color: #f8e9e9;
+}
+.quote_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  text-shadow: 0 1px 5px rgb(199, 199, 199);
+  margin: 0 0 0.5em;
+}
+.text:global(#text) {
+  color: #1f1b1b;
+  font-size: 2rem;
+  margin-top: 0.3em;
+  font-style: italic;
+  font-weight: 600;
+}
+.quote_box:global(#quote-box) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#ffc9c9, #d2d5ff);
+  width: 95%;
+  margin: 3em 50%;
+  transform: translateX(-50%);
+  padding: 3em;
+  box-shadow: 1px 1px 21px -1px gray;
+  border-radius: 8px;
+}
+.quote_author {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  margin: 1em;
+}
+.author:global(#author::before) {
+  content: "-";
+}
+.author:global(#author) {
+  color: #474747;
+  font-weight: 400;
+}
+.author:global(#author::after) {
+  content: "-";
+}
+.newQuote_button:global(#new-quote) {
+  background-color: transparent;
+  border-color: #f8e9e9;
+  color: #696fcc;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0.5em;
+  cursor: pointer;
+  border-radius: 8px;
+  outline: 0;
+  transition: color 0.3s ease;
+}
+.newQuote_button:global(#new-quote) > svg {
+  margin: 0 0.5em 0 0;
+  transition: color 0.3s ease;
+}
+.newQuote_button:global(#new-quote:hover) {
+  background-color: #fad5d5;
+  color: #f8e9e9;
+}
+.newQuote_button:global(#new-quote:hover) > svg {
+  color: #696fcc;
+}
+.tweet_quote:global(#tweet-quote) > svg {
+  margin: 0.2em;
+  transition: color 0.3s ease;
+}
+.tweet_quote:global(#tweet-quote:hover) > svg {
+  color: #696fcc;
+}
+@media (min-width: 991px) {
+  #quote-box {
+    width: 50%;
+  }
+}
